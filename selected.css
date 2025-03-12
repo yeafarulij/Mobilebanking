@@ -1,0 +1,181 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa;
+    color: #333;
+    overflow-x: hidden;
+}
+
+/* Header Section */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #ffffff;
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: contain;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.back-icon {
+    font-size: 20px;
+    color: #6A0DAD;
+    cursor: pointer;
+}
+
+.header-icons {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.language-text {
+    font-size: 16px;
+    font-weight: bold;
+    color: #6A0DAD;
+}
+
+.refresh-icon {
+    font-size: 20px;
+    color: #6A0DAD;
+    cursor: pointer;
+}
+
+/* Title Section */
+.title-section {
+    text-align: center;
+    padding: 15px 0;
+    background-color: #fafafa;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.main-title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Account List Section */
+.account-list {
+    padding: 10px 20px;
+}
+
+.account-item {
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    margin-bottom: 10px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.account-item:hover {
+    background-color: #f3f3f3;
+}
+
+.account-icon {
+    color: #6A0DAD;
+    font-size: 24px;
+    margin-right: 15px;
+}
+
+.account-text {
+    flex: 1;
+}
+
+.account-name {
+    font-size: 16px;
+    font-weight: bold;
+    color: #6A0DAD;
+}
+
+.account-balance {
+    font-size: 14px;
+    color: #666;
+}
+
+.account-arrow {
+    font-size: 18px;
+    color: #6A0DAD;
+}
+
+/* Floating Action Button (FAB) */
+/* Floating Action Button (FAB) */
+.fab {
+    position: fixed;
+    bottom: 30px;
+    right: 20px;
+    background-color: #6A0DAD;
+    color: #fff;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}
+
+/* Ensure Font Awesome icons are correctly rendered */
+.fab i {
+    font-family: 'Font Awesome 6 Free', 'Font Awesome 6 Brands', sans-serif; /* Include multiple font families for compatibility */
+    font-weight: 900; /* Use the correct weight for solid icons */
+    font-size: 28px; /* Adjust font size to fit within the circle */
+    line-height: 1; /* Adjust line-height to ensure proper vertical alignment */
+    text-rendering: auto; /* Improve text rendering */
+    display: flex; /* Use flex to center the icon */
+    justify-content: center;
+    align-items: center;
+    -webkit-font-smoothing: antialiased; /* Smooth text rendering on WebKit browsers */
+    -moz-osx-font-smoothing: grayscale; /* Smooth text rendering on Mozilla browsers */
+}
+
+
+/* QR Panel Styles */
+.qr-panel {
+    position: fixed;
+    bottom: 90px; /* Position it 80px above the QR button */
+    right: 20px;
+    width: 200px;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    padding: 10px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+.qr-panel.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.qr-option {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #6A0DAD;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+.qr-option i {
+    font-size: 24px;
+}
+
+.qr-option p {
+    margin: 0;
+    font-size: 14px;
+}

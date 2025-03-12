@@ -1,0 +1,119 @@
+/* General body styling */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f1f1f1;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Modal container */
+.transfer-modal {
+    background-color: #fff;
+    border-radius: 0; /* No border radius */
+    box-shadow: 0 8px 8px rgba(0, 0, 0, 0.3); /* Updated shadow */
+    width: 300px; /* Updated width */
+    padding: 16px; /* Updated padding */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* Modal header - Adjusted color */
+.modal-header {
+    background-color: #94069e; /* Updated color */
+    padding: 15px;
+    text-align: center;
+}
+
+/* Modal header text styling */
+.modal-header h2 {
+    color: #fff; /* White text for header */
+    font-size: 20px;
+    margin: 0;
+    font-weight: bold;
+}
+
+/* Modal body */
+.modal-body {
+    display: flex;
+    flex-direction: column;
+    gap: 8px; /* Reduced gap */
+}
+
+/* Message title */
+.message-title p {
+    text-align: left; /* Left-aligned message text */
+    color: #000; /* Black text */
+    margin-bottom: 5px;
+    font-weight: normal; /* Not bold */
+}
+
+/* Message text styling */
+.message p {
+    margin: 5px 0;
+    font-size: 14px; /* Reduced font size */
+    color: #000; /* Black text */
+}
+
+/* Bold text styling */
+.bold-text {
+    font-family: 'Arial', sans-serif; /* Ensure a sans-serif font */
+    font-weight: bold; /* Bold text */
+}
+
+/* PIN input styling */
+.pin-input {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center align the label and input */
+}
+
+.pin-input label {
+    font-size: 14px; /* Font size */
+    color: rgba(0, 0, 0, 0.5); /* Dim text color */
+    font-weight: normal; /* Not bold */
+    margin-bottom: -24px; /* Negative margin to pull it up */
+    text-align: center; /* Center align label */
+}
+
+.pin-input input {
+    padding: 10px;
+    font-size: 16px; /* Reduced font size */
+    text-align: center; /* Center-aligned text in input */
+    width: 100%;
+    border: none;
+    border-bottom: 2px solid #94069e;
+    outline: none;
+    background-color: transparent;
+}
+
+/* PIN description */
+.pin-description {
+    font-size: 14px;
+    text-align: center;
+    color: #000; /* Black text */
+}
+
+/* Modal footer */
+.modal-footer {
+    display: flex;
+    justify-content: flex-end; /* Align buttons to the right */
+    align-items: center;
+    margin-top: 20px;
+    padding: 0 10px;
+}
+
+/* Text buttons - Continue and Cancel */
+.text-button {
+    background-color: transparent;
+    border: none;
+    color: #94069e;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-left: 10px; /* Space between buttons */
+}

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transfer Page UI</title>
+    <!-- Link to external CSS file -->
+    <link rel="stylesheet" href="transfer-styles.css">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- Top Header Section -->
+    <header class="top-header">
+        <i class="fas fa-arrow-left back-icon"></i>
+        <div class="lang-refresh">
+            <span class="language-icon">አማ</span>
+            <i class="fas fa-sync-alt refresh-icon"></i>
+        </div>
+    </header>
+
+    <!-- Transfer Header -->
+    <div class="transfer-header">
+        Transfer
+    </div>
+
+    <!-- Transfer List Section -->
+    <section class="transfer-list">
+        <a href="select.html" class="transfer-item">
+            <i class="fas fa-sync-alt transfer-icon"></i>
+            <div class="transfer-text">
+                <div class="transfer-title">Transfer to CBE Account</div>
+                <div class="transfer-subtitle">Transfer to CBE Account</div>
+            </div>
+            <i class="fas fa-chevron-right arrow-icon"></i> <!-- Updated smaller arrow icon -->
+        </a>
+
+        <a href="select.html" class="transfer-item">
+            <i class="fas fa-sync-alt transfer-icon"></i>
+            <div class="transfer-text">
+                <div class="transfer-title">Transfer to CBEBirr Wallet</div>
+                <div class="transfer-subtitle">Bank to CBEBirr Wallet transfer</div>
+            </div>
+            <i class="fas fa-chevron-right arrow-icon"></i> <!-- Updated smaller arrow icon -->
+        </a>
+
+        <a href="select.html" class="transfer-item">
+            <i class="fas fa-sync-alt transfer-icon"></i>
+            <div class="transfer-text">
+                <div class="transfer-title">Make Payment to Beneficiary</div>
+                <div class="transfer-subtitle">Transfer to your beneficiaries</div>
+            </div>
+            <i class="fas fa-chevron-right arrow-icon"></i> <!-- Updated smaller arrow icon -->
+        </a>
+
+        <a href="select.html" class="transfer-item">
+            <i class="fas fa-sync-alt transfer-icon"></i>
+            <div class="transfer-text">
+                <div class="transfer-title">Own Account Transfer</div>
+                <div class="transfer-subtitle">Transfer between your accounts</div>
+            </div>
+            <i class="fas fa-chevron-right arrow-icon"></i> <!-- Updated smaller arrow icon -->
+        </a>
+
+        <a href="select.html" class="transfer-item">
+            <i class="fas fa-sync-alt transfer-icon"></i>
+            <div class="transfer-text">
+                <div class="transfer-title">Local Money Transfer</div>
+                <div class="transfer-subtitle">Transfer to any non CBE customer</div>
+            </div>
+            <i class="fas fa-chevron-right arrow-icon"></i> <!-- Updated smaller arrow icon -->
+        </a>
+
+        <a href="select.html" class="transfer-item">
+            <i class="fas fa-sync-alt transfer-icon"></i>
+            <div class="transfer-text">
+                <div class="transfer-title">Transfer to own Telebirr Wallet</div>
+                <div class="transfer-subtitle">Transfer to own Telebirr Wallet</div>
+            </div>
+            <i class="fas fa-chevron-right arrow-icon"></i> <!-- Updated smaller arrow icon -->
+        </a>
+
+        <a href="select.html" class="transfer-item">
+            <i class="fas fa-sync-alt transfer-icon"></i>
+            <div class="transfer-text">
+                <div class="transfer-title">Transfer to Other Banks</div>
+                <div class="transfer-subtitle">Transfer to Other Banks</div>
+            </div>
+            <i class="fas fa-chevron-right arrow-icon"></i> <!-- Updated smaller arrow icon -->
+        </a>
+
+        <a href="select.html" class="transfer-item">
+            <i class="fas fa-sync-alt transfer-icon"></i>
+            <div class="transfer-text">
+                <div class="transfer-title">Transfer to Wallet</div>
+                <div class="transfer-subtitle">Transfer to Wallets</div>
+            </div>
+            <i class="fas fa-chevron-right arrow-icon"></i> <!-- Updated smaller arrow icon -->
+        </a>
+    </section>
+
+    <!-- Floating Action Button (QR Code) -->
+    <div class="fab" id="qr-fab">
+        <i class="fas fa-qrcode"></i>
+    </div>
+
+    <!-- QR Code Panel -->
+    <div id="qr-panel" class="qr-panel">
+        <div class="qr-option">
+            <i class="fas fa-hand-holding-usd"></i>
+            <p>Receive Money</p>
+        </div>
+        <div class="qr-option">
+            <i class="fas fa-qrcode"></i>
+            <p>Scan QR</p>
+        </div>
+        <div class="qr-option">
+            <i class="fas fa-receipt"></i>
+            <p>Verify Receipt</p>
+        </div>
+    </div>
+
+    <!-- Link to external JavaScript file -->
+    <script src="transfer-script.js"></script>
+
+</body>
+
+</html>

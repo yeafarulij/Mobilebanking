@@ -1,0 +1,138 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.back-button i {
+    font-size: 24px;
+    color: #6A0DAD;
+    cursor: pointer;
+}
+
+.right-icons {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.language-icon, .refresh-icon {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #6A0DAD;
+    font-size: 18px;
+}
+
+/* Title positioned below the header */
+.title {
+    text-align: center;
+    margin-top: 50px; /* Adjusted to 40px */
+}
+
+.title p {
+    font-weight: bold;
+    font-size: 18px;
+    color: #333;
+    margin: 9;
+    margin-top: 20px; /* Moved down by 20px */
+}
+
+/* Main content adjusted to move up */
+.main-content {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Align closer to the top */
+    align-items: center;
+    padding: 20px;
+}
+
+.input-group {
+    width: 100%;
+    max-width: 400px;
+    margin-top: -30px; /* Move the text box up by 30px */
+}
+
+input[type="text"] {
+    width: 90%; /* Adjusted width to 90% */
+    padding: 15px;
+    font-size: 16px;
+    border: 2px solid #6A0DAD; /* Purple border */
+    border-radius: 5px;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+input[type="text"]::placeholder {
+    color: #aaa;
+}
+
+input[type="text"]:focus {
+    border-color: #6A0DAD; /* Focus border effect */
+}
+
+.continue-btn {
+    width: 100%;
+    max-width: 400px;
+    padding: 15px;
+    font-size: 18px;
+    background-color: #ccc;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: not-allowed;
+    transition: background-color 0.3s ease, cursor 0.3s ease;
+    margin-top: 22px; /* Adjusted to 22px under the text box */
+}
+
+.continue-btn.active {
+    background-color: #6A0DAD; /* Active state background */
+    cursor: pointer;
+}
+
+/* Floating Action Button */
+.fab {
+    position: fixed;
+    bottom: 50px; /* Move the FAB up slightly */
+    right: 20px;
+    background-color: #6A0DAD;
+    color: #fff;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}
+
+.fab i {
+    font-size: 28px;
+}
+
+/* Fixes for Font Awesome Icons */
+.fa, .fa-brands, .fa-duotone, .fa-light, .fa-regular, .fa-solid, .fa-thin, .fab, .fad, .fal, .far, .fas, .fat {
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    font-style: normal;
+    font-variant: normal;
+    line-height: 1;
+    text-rendering: auto;
+}

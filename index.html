@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bank App UI</title>
+    <!-- FontAwesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Link to the CSS file in the same folder -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="header">
+        <div class="menu-icon" id="menu-toggle"><i class="fas fa-bars"></i></div>
+        <div class="right-icons">
+            <button id="lang-toggle" class="language-icon">አማ</button>
+            <button id="refresh-button" class="refresh-icon"><i class="fas fa-sync-alt"></i></button>
+        </div>
+    </header>
+
+    <!-- Slide-in Menu -->
+    <div id="side-menu" class="side-menu">
+        <img src="images/strip.png" alt="Menu strip" class="strip-image"> <!-- Ensure the image path is correct -->
+    </div>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Balance Card -->
+        <section class="balance-card">
+            <div class="balance-details">
+                <p class="balance-label">Balance</p>
+                <div class="balance-info">
+                    <p class="balance-amount" id="balance-amount">***** Br.</p>
+                    <button class="toggle-money-btn" id="toggle-money-btn">
+                        <i class="fas fa-eye"></i>
+                    </button>
+                </div>
+                <p class="account-number">Wadia - 1000******0686</p>
+                <p class="current-date" id="current-date"></p>
+            </div>
+        </section>
+
+        <!-- Services Section with Green Dot -->
+        <section class="services">
+            <span class="green-dot"></span> <!-- Green Dot positioned correctly -->
+            <div class="services-heading">
+                <h2>Services</h2>
+            </div>
+            <div class="service-cards">
+                <div class="service-card">
+                    <a href="transfer.html">
+                        <i class="fas fa-exchange-alt"></i>
+                        <p>Transfer</p>
+                    </a>
+                </div>
+                <div class="service-card">
+                    <a href="topup.html">
+                        <i class="fas fa-mobile-alt"></i>
+                        <p>Top Up</p>
+                        <span class="green-dot-topup"></span> <!-- Green Dot added -->
+                    </a>
+                </div>
+                <div class="service-card">
+                    <a href="utilities.html">
+                        <i class="fas fa-home"></i>
+                        <p>Utilities</p>
+                    </a>
+                </div>
+                <div class="service-card">
+                    <a href="help.html">
+                        <i class="fas fa-folder"></i>
+                        <p>Help</p>
+                    </a>
+                </div>
+                <div class="service-card">
+                    <a href="banking.html">
+                        <i class="fas fa-university"></i>
+                        <p>Banking</p>
+                    </a>
+                </div>
+                <div class="service-card">
+                    <a href="events.html">
+                        <i class="fas fa-calendar"></i>
+                        <p>Events</p>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Bottom Navigation Bar -->
+    <nav class="bottom-nav">
+        <button class="nav-item home-recent">
+            <i class="fas fa-th"></i>
+            <p>Home</p>
+        </button>
+        <button class="nav-item">
+            <i class="fas fa-hand-holding-usd"></i>
+            <p>Finance</p>
+        </button>
+        <button class="nav-item">
+            <i class="fas fa-university"></i>
+            <p>Bank</p>
+        </button>
+        <button class="nav-item recent-home">
+            <i class="fas fa-history"></i>
+            <p>Recent</p>
+        </button>
+    </nav>
+
+    <!-- Floating Action Button -->
+    <div class="fab" id="qr-fab">
+        <i class="fas fa-qrcode"></i>
+    </div>
+
+    <!-- QR Code Panel -->
+    <div id="qr-panel" class="qr-panel">
+        <div class="qr-option">
+            <i class="fas fa-hand-holding-usd"></i>
+            <p>Receive Money</p>
+        </div>
+        <div class="qr-option">
+            <i class="fas fa-qrcode"></i>
+            <p>Scan QR</p>
+        </div>
+        <div class="qr-option">
+            <i class="fas fa-receipt"></i>
+            <p>Verify Receipt</p>
+        </div>
+    </div>
+
+    <!-- Link to the JavaScript file in the same folder -->
+    <script src="script.js"></script>
+</body>
+</html>

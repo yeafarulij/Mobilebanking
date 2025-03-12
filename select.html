@@ -3,127 +3,59 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Facebook-Style Change Password UI</title>
-    <style>
-        /* Basic styling */
-        body {
-            font-family: Arial, sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            background-color: #f0f2f5;
-            margin: 0;
-        }
-        .container {
-            background-color: #ffffff;
-            width: 350px;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
-            text-align: center;
-        }
-        /* Profile Image */
-        .profile {
-            margin-bottom: 20px;
-            position: relative;
-        }
-        .profile img {
-            width: 80px;
-            height: 80px;
-            border-radius: 50%;
-            object-fit: cover;
-        }
-        .profile-name {
-            font-weight: bold;
-            color: #333;
-            margin-top: 10px;
-            font-size: 16px;
-        }
-        /* Form Styling */
-        .form-group {
-            margin-bottom: 15px;
-            text-align: left;
-        }
-        .form-group label {
-            font-size: 14px;
-            color: #333;
-            font-weight: bold;
-        }
-        .form-group input[type="password"] {
-            width: 100%;
-            padding: 10px;
-            margin-top: 5px;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            font-size: 14px;
-        }
-        /* Change Button */
-        .change-button {
-            background-color: #1877f2;
-            color: #ffffff;
-            border: none;
-            width: 100%;
-            padding: 10px;
-            border-radius: 5px;
-            font-size: 16px;
-            cursor: pointer;
-            font-weight: bold;
-        }
-        .change-button:hover {
-            background-color: #155bb5;
-        }
-    </style>
+    <title>Select Account</title>
+    <link rel="stylesheet" href="selected.css"> <!-- Path to the CSS file -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> <!-- Font Awesome -->
 </head>
 <body>
-    <div class="container">
-        <!-- Profile Section -->
-        <div class="profile">
-            <img src="profile.jpg" alt="Profile Image" id="profileImage">
-            <div class="profile-name" id="profileName">User Name</div>
+
+    <!-- Top Header Section -->
+    <header class="header">
+        <i class="fas fa-arrow-left back-icon" onclick="goBack()"></i>
+        <div class="header-icons">
+            <span id="lang-toggle" class="language-text">አማ</span>
+            <i id="refresh-button" class="fas fa-sync-alt refresh-icon"></i>
         </div>
-        <!-- Password Form -->
-        <div>
-            <div class="form-group">
-                <label for="currentPassword">Current Password</label>
-                <input type="password" id="currentPassword" placeholder="Enter current password">
+    </header>
+
+    <!-- Main Title Section -->
+    <div class="title-section">
+        <h1 class="main-title">Select</h1>
+    </div>
+
+    <!-- Account List Section -->
+    <div class="account-list">
+        <div class="account-item" onclick="redirectToSendPage()">
+            <i class="fas fa-building account-icon"></i>
+            <div class="account-text">
+                <div class="account-name">Wadiah - ETB - 0686</div>
+                <div class="account-balance">Balance: ETB 4.83</div>
             </div>
-            <div class="form-group">
-                <label for="newPassword">New Password</label>
-                <input type="password" id="newPassword" placeholder="Enter new password">
-            </div>
-            <div class="form-group">
-                <label for="confirmPassword">Confirm Password</label>
-                <input type="password" id="confirmPassword" placeholder="Confirm new password">
-            </div>
-            <button class="change-button" onclick="changePassword()">Change Password</button>
+            <i class="fas fa-chevron-right account-arrow"></i>
         </div>
     </div>
 
-    <script>
-        // JavaScript to simulate a password change function and display the image name
-        function changePassword() {
-            const currentPassword = document.getElementById("currentPassword").value;
-            const newPassword = document.getElementById("newPassword").value;
-            const confirmPassword = document.getElementById("confirmPassword").value;
+    <!-- Floating Action Button (QR Code) -->
+    <div id="qr-fab" class="fab">
+        <i class="fas fa-qrcode"></i>
+    </div>
 
-            if (newPassword !== confirmPassword) {
-                alert("New passwords do not match.");
-                return;
-            }
-            
-            if (!currentPassword || !newPassword || !confirmPassword) {
-                alert("Please fill out all fields.");
-                return;
-            }
+    <!-- QR Panel (Initially Hidden) -->
+    <div id="qr-panel" class="qr-panel">
+        <div class="qr-option">
+            <i class="fas fa-qrcode"></i>
+            <p>Scan QR</p>
+        </div>
+        <div class="qr-option">
+            <i class="fas fa-receipt"></i>
+            <p>Verify Receipt</p>
+        </div>
+        <div class="qr-option">
+            <i class="fas fa-hand-holding-usd"></i>
+            <p>Receive Money</p>
+        </div>
+    </div>
 
-            // Alert success message
-            alert("Password changed successfully!");
-
-            // Display image name
-            const imageName = document.getElementById("profileImage").getAttribute("src").split('/').pop();
-            console.log("Profile image name:", imageName);
-        }
-    </script>
+    <script src="scripts.js"></script>
 </body>
 </html>

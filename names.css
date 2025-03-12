@@ -1,0 +1,137 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header Styling with Light Background Color */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #f8f5f9; /* Lighter shade of the main color */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.back-button i {
+    font-size: 24px;
+    color: #6A0DAD;
+    cursor: pointer;
+}
+
+.title {
+    font-weight: bold;
+    font-size: 16px;
+    color: #333;
+    position: absolute;
+    top: 56px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #f8f9fa;
+    padding: 12px;
+    align-content: center;
+}
+
+.right-icons {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.language-icon, .refresh-icon {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #6A0DAD;
+    font-size: 18px;
+}
+
+/* Main Content Section */
+.main-content {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 20px;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #fff;
+    width: 100%; /* Full width to show left and right content fully */
+    max-width: 100%;
+    padding: 20px;
+    margin-top: 50px; /* Margin-top of 50px */
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.user-info i {
+    font-size: 40px;
+    color: #6A0DAD;
+}
+
+.name-container {
+    flex-grow: 1;
+    margin-left: 10px;
+}
+
+/* Main Name Text */
+.name-text {
+    font-size: 16px;
+    color: #6A0DAD; /* Main name remains colored */
+    margin: 0;
+    font-weight: bold;
+}
+
+/* Sub Name Text (Unbold and uncolored) */
+.sub-text {
+    font-size: 14px;
+    color: #333; /* Sub-text is uncolored */
+    margin: 0;
+    font-weight: normal; /* Unbold */
+}
+
+button#editBtn {
+    background: none;
+    border: none;
+    color: #6A0DAD;
+    cursor: pointer;
+    font-size: 14px; /* Smaller chevron */
+}
+
+.small-icon i {
+    font-size: 14px;
+}
+
+/* Floating Action Button (FAB) */
+.fab {
+    position: fixed;
+    bottom: 50px;
+    right: 20px;
+    background-color: #6A0DAD;
+    color: #fff;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}
+
+.fab i {
+    font-size: 28px; /* Correct size for the QR code icon */
+}

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Facebook-Style Change Password UI</title>
+    <style>
+        /* Basic styling */
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #f0f2f5;
+            margin: 0;
+        }
+        .container {
+            background-color: #ffffff;
+            width: 350px;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+            text-align: center;
+        }
+        /* Profile Image */
+        .profile {
+            margin-bottom: 20px;
+            position: relative;
+        }
+        .profile img {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+        .profile-name {
+            font-weight: bold;
+            color: #333;
+            margin-top: 10px;
+            font-size: 16px;
+        }
+        /* Form Styling */
+        .form-group {
+            margin-bottom: 15px;
+            text-align: left;
+        }
+        .form-group label {
+            font-size: 14px;
+            color: #333;
+            font-weight: bold;
+        }
+        .form-group input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+        /* Change Button */
+        .change-button {
+            background-color: #1877f2;
+            color: #ffffff;
+            border: none;
+            width: 100%;
+            padding: 10px;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+        .change-button:hover {
+            background-color: #155bb5;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Profile Section -->
+        <div class="profile">
+            <img src="profile.jpg" alt="Profile Image" id="profileImage">
+            <div class="profile-name" id="profileName">User Name</div>
+        </div>
+        <!-- Password Form -->
+        <div>
+            <div class="form-group">
+                <label for="currentPassword">Current Password</label>
+                <input type="password" id="currentPassword" placeholder="Enter current password">
+            </div>
+            <div class="form-group">
+                <label for="newPassword">New Password</label>
+                <input type="password" id="newPassword" placeholder="Enter new password">
+            </div>
+            <div class="form-group">
+                <label for="confirmPassword">Confirm Password</label>
+                <input type="password" id="confirmPassword" placeholder="Confirm new password">
+            </div>
+            <button class="change-button" onclick="changePassword()">Change Password</button>
+        </div>
+    </div>
+
+    <script>
+        // JavaScript to simulate a password change function and display the image name
+        function changePassword() {
+            const currentPassword = document.getElementById("currentPassword").value;
+            const newPassword = document.getElementById("newPassword").value;
+            const confirmPassword = document.getElementById("confirmPassword").value;
+
+            if (newPassword !== confirmPassword) {
+                alert("New passwords do not match.");
+                return;
+            }
+            
+            if (!currentPassword || !newPassword || !confirmPassword) {
+                alert("Please fill out all fields.");
+                return;
+            }
+
+            // Alert success message
+            alert("Password changed successfully!");
+
+            // Display image name
+            const imageName = document.getElementById("profileImage").getAttribute("src").split('/').pop();
+            console.log("Profile image name:", imageName);
+        }
+    </script>
+</body>
+</html>
